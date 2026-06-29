@@ -231,10 +231,11 @@ if (form) {
 
     let valido = true;
 
-    const nome  = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
+    const nome     = document.getElementById('nome').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
 
-    // Valida nome
+    // 1. Valida nome (OBRIGATÓRIO)
     if (nome.length < 2) {
       mostrarErro('nome', 'erro-nome', 'Informe seu nome completo.');
       valido = false;
@@ -242,11 +243,22 @@ if (form) {
       limparErro('nome', 'erro-nome');
     }
 
-    // Valida email
-    if (!validarEmail(email)) {
-      mostrarErro('email', 'erro-email', 'Informe um e-mail válido.');
+    // 2. Valida WhatsApp (AGORA É OBRIGATÓRIO — mínimo de 14 caracteres com a máscara)
+    // Exemplo de formato com máscara: (11) 99999-9999 (tem 15 caracteres)
+    if (telefone.length < 14) { 
+      mostrarErro('telefone', 'erro-email', 'Informe um WhatsApp válido.'); // Usando o mesmo container de erro do form para facilitar
       valido = false;
     } else {
+      limparErro('telefone', 'erro-email');
+    }
+
+    // 3. Valida email (AGORA É OPCIONAL)
+    // Só valida a estrutura do e-mail SE o usuário tiver digitado alguma coisa nele
+    if (email.length > 0 && !validarEmail(email)) {
+      mostrarErro('email', 'erro-email', 'Se preencher o e-mail, informe um formato válido.');
+      valido = false;
+    } else if (email.length === 0 || validarEmail(email)) {
+      // Se estiver vazio ou se for um e-mail válido, limpa o erro desse campo
       limparErro('email', 'erro-email');
     }
 
@@ -268,14 +280,10 @@ if (form) {
     })
     .then(async function (response) {
       if (response.status === 200) {
-        // Se deu sucesso, limpa os campos do formulário
         form.reset();
-
-        // Exibe a mensagem interna de sucesso configurada no HTML
         const sucesso = document.getElementById('form-sucesso');
         if (sucesso) {
           sucesso.removeAttribute('hidden');
-          // Esconde a mensagem de sucesso após 6 segundos
           setTimeout(function () {
             sucesso.setAttribute('hidden', '');
           }, 6000);
@@ -289,7 +297,6 @@ if (form) {
       alert('Erro de conexão. Verifique se está conectado à internet.');
     })
     .finally(function () {
-      // Devolve o botão ao estado padrão após o término de tudo
       btnEnviar.textContent = 'Enviar mensagem';
       btnEnviar.disabled = false;
     });
