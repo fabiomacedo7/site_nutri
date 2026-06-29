@@ -217,13 +217,20 @@ if (form) {
     }
   });
 
-  document.getElementById('email').addEventListener('blur', function () {
-    if (!validarEmail(this.value.trim())) {
-      mostrarErro('email', 'erro-email', 'Informe um e-mail válido.');
-    } else {
-      limparErro('email', 'erro-email');
-    }
-  });
+ document.getElementById('email').addEventListener('blur', function () {
+  const valor = this.value.trim();
+  
+  // Se estiver vazio, não mostra erro e limpa o que já existia
+  if (valor.length === 0) {
+    limparErro('email', 'erro-email');
+  } 
+  // Se tiver algo digitado, aí sim valida se o formato está correto
+  else if (!validarEmail(valor)) {
+    mostrarErro('email', 'erro-email', 'Informe um e-mail válido.');
+  } else {
+    limparErro('email', 'erro-email');
+  }
+});
 
   // Evento de Envio Integrado com o Web3Forms
   form.addEventListener('submit', function (e) {
