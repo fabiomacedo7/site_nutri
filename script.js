@@ -186,7 +186,7 @@ document.querySelectorAll('.faq__item').forEach(function (item) {
 });
 
 
-// ---- 6. VALIDAÇÃO DO FORMULÁRIO ----
+// ---- 6. VALIDAÇÃO E ENVIO REAL DO FORMULÁRIO (Web3Forms) ----
 const form = document.getElementById('contato-form');
 
 function mostrarErro(campoId, erroId, mensagem) {
@@ -204,7 +204,6 @@ function limparErro(campoId, erroId) {
 }
 
 function validarEmail(email) {
-  // Regex simples para validação básica
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
@@ -226,8 +225,9 @@ if (form) {
     }
   });
 
+  // Evento de Envio Integrado com o Web3Forms
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // evita recarregar a página
+    e.preventDefault(); // Impede o recarregamento padrão da página
 
     let valido = true;
 
@@ -250,27 +250,49 @@ if (form) {
       limparErro('email', 'erro-email');
     }
 
+    // Se houver erros visuais, para a execução e não envia
     if (!valido) return;
 
-    // Simula envio (aqui você conectaria ao seu backend ou API)
+    // Captura o botão para mudar o estado visual
     const btnEnviar = form.querySelector('[type="submit"]');
     btnEnviar.textContent = 'Enviando...';
     btnEnviar.disabled = true;
 
-    setTimeout(function () {
-      form.reset();
+    // Coleta todos os dados do formulário de forma automática
+    const formData = new FormData(form);
+
+    // Dispara a requisição em segundo plano para o Web3Forms
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(async function (response) {
+      if (response.status === 200) {
+        // Se deu sucesso, limpa os campos do formulário
+        form.reset();
+
+        // Exibe a mensagem interna de sucesso configurada no HTML
+        const sucesso = document.getElementById('form-sucesso');
+        if (sucesso) {
+          sucesso.removeAttribute('hidden');
+          // Esconde a mensagem de sucesso após 6 segundos
+          setTimeout(function () {
+            sucesso.setAttribute('hidden', '');
+          }, 6000);
+        }
+      } else {
+        alert('Ocorreu um erro ao processar o formulário. Tente novamente.');
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+      alert('Erro de conexão. Verifique se está conectado à internet.');
+    })
+    .finally(function () {
+      // Devolve o botão ao estado padrão após o término de tudo
       btnEnviar.textContent = 'Enviar mensagem';
       btnEnviar.disabled = false;
-
-      const sucesso = document.getElementById('form-sucesso');
-      if (sucesso) {
-        sucesso.removeAttribute('hidden');
-        // Esconde mensagem após 5s
-        setTimeout(function () {
-          sucesso.setAttribute('hidden', '');
-        }, 5000);
-      }
-    }, 1200);
+    });
   });
 }
 
