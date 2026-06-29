@@ -420,7 +420,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__tag-lateral {
   position: absolute;
   bottom: 60px;
-  left: 65px;
+  left: 100px;
   background: var(--vinho);
   color: var(--branco);
   font-size: 0.7rem;
