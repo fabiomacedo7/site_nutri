@@ -452,7 +452,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__scroll-hint {
   position: absolute;
-  bottom: 32px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
