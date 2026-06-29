@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheila Silva | Nutricionista</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-leaf">🌿</span>
+        Sheila Silva
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#servicos" class="nav__link">Serviços</a></li>
+        <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+        <li><a href="#contato" class="nav__link nav__link--cta">Agendar consulta</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+    </div>
+    <div class="hero__monogram" aria-hidden="true">SS</div>
+    <div class="container hero__content">
+      <div class="hero__text">
+        <span class="hero__eyebrow">✨ Edição Saúde da Mulher</span>
+        <h1 class="hero__title">
+          Nutrição que<br />
+          <em>transforma vidas.</em>
+        </h1>
+        <p class="hero__desc">
+          Planos alimentares personalizados que respeitam a sua rotina, seus gostos
+          e a sua biologia. Porque saúde de verdade começa pelo prato.
+        </p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--primary">Agendar consulta gratuita</a>
+          <a href="#sobre" class="btn btn--ghost">Conheça meu trabalho</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>+800</strong>
+            <span>pacientes atendidos</span>
+          </div>
+          <div class="stat">
+            <strong>8 anos</strong>
+            <span>de experiência</span>
+          </div>
+          <div class="stat">
+            <strong>98%</strong>
+            <span>de satisfação</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__circle">
+          <div class="hero__leaf hero__leaf--1">🍓</div>
+          <div class="hero__leaf hero__leaf--2">🥗</div>
+          <div class="hero__leaf hero__leaf--3">🫐</div>
+          <div class="hero__leaf hero__leaf--4">🍃</div>
+          <div class="hero__leaf hero__leaf--5">🌸</div>
+
+          <div class="hero__trophy">
+            <span>🏆</span>
+            <small>2026</small>
+          </div>
+
+          <div class="hero__tag-lateral">Edição Saúde da Mulher na Copa</div>
+
+          <div class="hero__photo-card">
+            <div class="hero__photo-card-inner">
+              <img 
+                src="images/capa.PNG" 
+                alt="Sheila Silva, Nutricionista" 
+                class="hero__avatar-img"
+              />
+            </div>
+            <div class="hero__photo-caption">
+              <strong>Sheila Silva</strong>
+              <span>Nutricionista · @nutrisheilasilva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre__grid">
+      <div class="sobre__image-wrap">
+        <div class="sobre__image-bg"></div>
+        <div class="sobre__badge">
+          <span>CRN</span>
+          <strong>3-12345</strong>
+        </div>
+        <div class="sobre__image-placeholder">
+          <img src="images/capa.PNG" alt="Nutri Sheila Silva">
+        </div>
+      </div>
+      <div class="sobre__text">
+        <span class="section-eyebrow">Sobre mim</span>
+        <h2 class="section-title">Nutrição que vai além da dieta</h2>
+        <p>
+          Sou Sheila Silva, nutricionista formada pela USP, com especialização em
+          Nutrição Funcional e Integrativa. Acredito que cada corpo tem uma
+          história única — e que a alimentação deve ser aliada, não inimiga.
+        </p>
+        <p>
+          Minha abordagem une ciência e escuta ativa: entendo sua rotina, seus
+          objetivos e suas dificuldades antes de montar qualquer plano. Sem
+          dietas restritivas impostas, sem julgamentos.
+        </p>
+        <ul class="sobre__credenciais">
+          <li>
+            <span class="credencial-icon">🎓</span>
+            <div>
+              <strong>Mestre em Ciências da Nutrição</strong>
+              <span>UNIFESP · 2018</span>
+            </div>
+          </li>
+          <li>
+            <span class="credencial-icon">🏆</span>
+            <div>
+              <strong>Especialista em Nutrição Funcional</strong>
+              <span>VP&A Cursos · 2016</span>
+            </div>
+          </li>
+          <li>
+            <span class="credencial-icon">📖</span>
+            <div>
+              <strong>Colunista</strong>
+              <span>Revista Boa Forma & Saúde</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">O que ofereço</span>
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-desc">Cada serviço é desenvolvido para o seu momento de vida, com acompanhamento próximo e planos realmente práticos.</p>
+      </div>
+      <div class="servicos__grid">
+
+        <article class="card card--servico">
+          <div class="card__icon">🌱</div>
+          <h3>Consulta Inicial</h3>
+          <p>Avaliação completa do seu perfil nutricional, histórico clínico e objetivos. O ponto de partida para a sua transformação.</p>
+          <ul class="card__lista">
+            <li>Anamnese completa</li>
+            <li>Avaliação antropométrica</li>
+            <li>Definição de metas</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+        <article class="card card--servico card--destaque">
+          <div class="card__badge-top">Mais escolhido</div>
+          <div class="card__icon">🥗</div>
+          <h3>Acompanhamento Mensal</h3>
+          <p>Plano alimentar atualizado mensalmente com retornos quinzenais. Evolução monitorada e suporte contínuo por WhatsApp.</p>
+          <ul class="card__lista">
+            <li>2 retornos por mês</li>
+            <li>Plano atualizado a cada consulta</li>
+            <li>Suporte via WhatsApp</li>
+            <li>Análise de exames</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+        <article class="card card--servico">
+          <div class="card__icon">💻</div>
+          <h3>Consulta Online</h3>
+          <p>Todo o cuidado da consulta presencial, sem sair de casa. Via Google Meet, com materiais enviados por e-mail.</p>
+          <ul class="card__lista">
+            <li>Flexibilidade de horário</li>
+            <li>Atendimento nacional</li>
+            <li>Gravação disponível</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+        <article class="card card--servico">
+          <div class="card__icon">👶</div>
+          <h3>Nutrição Materno-Infantil</h3>
+          <p>Suporte nutricional para gestantes, nutrizes e crianças em cada fase do desenvolvimento.</p>
+          <ul class="card__lista">
+            <li>Pré e pós-parto</li>
+            <li>Introdução alimentar</li>
+            <li>Seletividade alimentar</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+        <article class="card card--servico">
+          <div class="card__icon">⚡</div>
+          <h3>Nutrição Esportiva</h3>
+          <p>Desempenho e composição corporal para atletas amadores e profissionais. Estratégias de pré, intra e pós-treino.</p>
+          <ul class="card__lista">
+            <li>Periodização nutricional</li>
+            <li>Suplementação assertiva</li>
+            <li>Análise de bioimpedância</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+        <article class="card card--servico">
+          <div class="card__icon">🧬</div>
+          <h3>Nutrição Funcional</h3>
+          <p>Abordagem integrativa que une alimentação, suplementação e estilo de vida para tratar a causa, não o sintoma.</p>
+          <ul class="card__lista">
+            <li>Interpretação de exames</li>
+            <li>Modulação intestinal</li>
+            <li>Protocolo anti-inflamatório</li>
+          </ul>
+          <a href="#contato" class="card__link">Agendar →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">O que dizem sobre mim</span>
+        <h2 class="section-title">Depoimentos</h2>
+      </div>
+      <div class="depoimentos__track" id="depoimentos-track">
+
+        <article class="depoimento">
+          <div class="depoimento__stars">★★★★★</div>
+          <blockquote>
+            "Depois de anos tentando dietas da internet, a Ana foi a primeira profissional que realmente entendeu minha rotina. Perdi 12 kg em 5 meses sem passar fome."
+          </blockquote>
+          <footer class="depoimento__autor">
+            <div class="depoimento__avatar">CL</div>
+            <div>
+              <strong>Carla Lopes</strong>
+              <span>Paciente há 1 ano</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="depoimento">
+          <div class="depoimento__stars">★★★★★</div>
+          <blockquote>
+            "Comecei por conta do treino, mas aprendi muito mais sobre meu corpo. Minha performance na corrida melhorou absurdamente e ainda me sinto com mais energia."
+          </blockquote>
+          <footer class="depoimento__autor">
+            <div class="depoimento__avatar">RM</div>
+            <div>
+              <strong>Rafael Motta</strong>
+              <span>Corredor amador</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="depoimento">
+          <div class="depoimento__stars">★★★★★</div>
+          <blockquote>
+            "A consulta online funciona muito bem! Mesmo morando no interior, tenho acesso a um atendimento de altíssima qualidade. Super recomendo."
+          </blockquote>
+          <footer class="depoimento__autor">
+            <div class="depoimento__avatar">JS</div>
+            <div>
+              <strong>Juliana Souza</strong>
+              <span>Paciente online</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="depoimento">
+          <div class="depoimento__stars">★★★★★</div>
+          <blockquote>
+            "Levei minha filha de 3 anos para a consultoria de introdução alimentar. A Ana passou confiança do início ao fim. Hoje minha filha come de tudo!"
+          </blockquote>
+          <footer class="depoimento__autor">
+            <div class="depoimento__avatar">PC</div>
+            <div>
+              <strong>Patricia Costa</strong>
+              <span>Mãe de paciente</span>
+            </div>
+          </footer>
+        </article>
+
+      </div>
+      <div class="depoimentos__controles">
+        <button class="dep-btn" id="dep-prev" aria-label="Anterior">←</button>
+        <div class="dep-dots" id="dep-dots"></div>
+        <button class="dep-btn" id="dep-next" aria-label="Próximo">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container faq__inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Dúvidas frequentes</span>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq__lista" id="faq-lista">
+
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false">
+            Como funciona a primeira consulta?
+            <span class="faq__icone" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__resposta">
+            <p>Na primeira consulta, fazemos uma anamnese completa: histórico de saúde, exames recentes, rotina alimentar, preferências e objetivos. A consulta dura cerca de 60 minutos e ao final você já sai com orientações iniciais.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false">
+            As consultas online são tão completas quanto as presenciais?
+            <span class="faq__icone" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__resposta">
+            <p>Sim! A diferença é apenas a modalidade. Para as medidas antropométricas, enviamos um guia de como medir em casa. Todo o plano, análise de exames e acompanhamento são feitos da mesma forma.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false">
+            Em quanto tempo verei resultados?
+            <span class="faq__icone" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__resposta">
+            <p>Depende muito do objetivo e do ponto de partida, mas a maioria dos pacientes relata melhora na disposição e qualidade do sono já nas primeiras 2-3 semanas. Resultados de composição corporal geralmente aparecem a partir do primeiro mês.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false">
+            Os planos alimentares aceitam restrições e preferências?
+            <span class="faq__icone" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__resposta">
+            <p>Com certeza. Trabalhamos com vegetarianos, veganos, pessoas com alergias, intolerâncias ou simplesmente com alimentos que não gostam. O plano é feito para você, não para um paciente genérico.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pergunta" aria-expanded="false">
+            Como é feito o acompanhamento entre consultas?
+            <span class="faq__icone" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__resposta">
+            <p>No plano mensal, você tem suporte via WhatsApp para dúvidas rápidas nos dias úteis. Também enviamos lembretes, receitas e conteúdos educativos pelo canal da nossa clínica.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO / CTA ===== -->
+  <section class="contato" id="contato">
+    <div class="container contato__grid">
+      <div class="contato__texto">
+        <span class="section-eyebrow section-eyebrow--light">Vamos conversar?</span>
+        <h2 class="section-title section-title--light">Comece sua jornada hoje</h2>
+        <p>A primeira consulta de avaliação é gratuita e sem compromisso. Preencha o formulário e entro em contato em até 24 horas.</p>
+        <div class="contato__info">
+          <div class="info-item">
+            <span>📍</span>
+            <span>Rua das Palmeiras, 120 – Sala 45<br>Vila Madalena, São Paulo – SP</span>
+          </div>
+          <div class="info-item">
+            <span>📞</span>
+            <span>(11) 99999-0000</span>
+          </div>
+          <div class="info-item">
+            <span>✉️</span>
+            <span>contato@sheilasilva.nutri.br</span>
+          </div>
+          <div class="info-item">
+            <span>⏰</span>
+            <span>Segunda a sexta, 8h às 18h<br>Sábados, 8h às 12h</span>
+          </div>
+        </div>
+      </div>
+      <form class="contato__form" id="contato-form" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          <span class="form-error" id="erro-nome"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          <span class="form-error" id="erro-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="telefone">WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-0000" />
+        </div>
+        <div class="form-group">
+          <label for="servico">Serviço de interesse</label>
+          <select id="servico" name="servico">
+            <option value="">Selecione...</option>
+            <option>Consulta Inicial</option>
+            <option>Acompanhamento Mensal</option>
+            <option>Consulta Online</option>
+            <option>Nutrição Materno-Infantil</option>
+            <option>Nutrição Esportiva</option>
+            <option>Nutrição Funcional</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre seus objetivos..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+        <div class="form-sucesso" id="form-sucesso" hidden>
+          ✅ Mensagem enviada! Entro em contato em breve.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-leaf">🌿</span>
+        <strong>Sheila Silva · Nutricionista</strong>
+        <p>CRN 3-12345</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">📸 @nutrisheilasilva</a>
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5511960733174%3Ftext%3DQuero%252520saber%252520mais%252520sobre%252520consultas...%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnFPx59tORhWOxUpCyWVxmUa1__tcBKyYlWjCT_OEbwgMgQaeJHM0HIKu4vIE_aem_cLh-OFN0bKjpVEvTz9dr0w&e=AUB9zKHOE2r2cfC69vFs-M3zfTy-AotAy1WVqROj1kOqwQ2nOyv9-Mkr9hOltdHDEcdHZq0MPIFjqdH3H-g6OnTehTV7lhvgzmPxiqL3jFSmxEmb7v_tzcTcxb0U5yxSbbL9wEGV2v7YDaW1nNHyMqw" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2025 Sheila Silva Nutrição. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
