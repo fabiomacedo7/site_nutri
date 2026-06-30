@@ -875,6 +875,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--marrom);
 }
 
+.form-group textarea {
+  resize: none;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
